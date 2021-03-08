@@ -91,6 +91,12 @@ $("#generated-code-copy").click(() => {
   $("#code-ground").select();
   document.execCommand("copy");
 });
+
+$("#download-button").click(() => {
+  const img = document.getElementById("display-image")
+  var url = img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+  window.open(url);
+})
 function performFilter(filterName, value) {
   const image = document.getElementById("display-image");
   filterName = filterName.trim();
