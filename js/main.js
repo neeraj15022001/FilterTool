@@ -39,3 +39,23 @@ $("#change-image-button").click(() => {
     $("#url-field").val("");
   }
 });
+
+$("input[type='range']").mousedown(function (e) {
+  const currentElement = e.target;
+  const id = currentElement.id;
+  const label = $(`#${id}`).prev("label")[0];
+  const labelName = label.innerHTML;
+  $("input[type='range']").mousemove(function (event) {
+    // values: e.clientX, e.clientY, e.pageX, e.pageY
+    label.innerHTML = labelName + " : " + event.target.value
+  });
+});
+
+$("input[type='range']").mouseup(function (e) {
+  $("input[type='range']").unbind("mousemove");
+  const currentElement = e.target;
+  const id = currentElement.id;
+  const label = $(`#${id}`).prev("label")[0];
+  const labelName = label.innerHTML;
+  label.innerHTML = labelName.split(":")[0]
+});
