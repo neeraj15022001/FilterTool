@@ -80,6 +80,17 @@ $("#color-picker").change((e) => {
   dropShadowColor = e.target.value;
 });
 
+$("#generate-button").click(() => {
+  const image = document.getElementById("display-image");
+  const filterValue = image.style.filter;
+  const generatedCode = `filter : ${filterValue};`;
+  $("#code-ground").html(generatedCode);
+});
+
+$("#generated-code-copy").click(() => {
+  $("#code-ground").select();
+  document.execCommand("copy");
+});
 function performFilter(filterName, value) {
   const image = document.getElementById("display-image");
   filterName = filterName.trim();
