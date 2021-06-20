@@ -41,7 +41,7 @@
     <div
       class="mt-3 mb-5 d-flex align-items-center justify-content-between px-5"
     >
-      <span class="fs-2 text-center text-capitalize fw-normal">
+      <span class="fs-2 text-center text-capitalize fw-bolder">
         Filter css tool
       </span>
       <div>
@@ -139,10 +139,11 @@
           <label for="brightness" class="form-label">Brightness</label>
           <input
             type="range"
-            value="0"
+            value="100"
             name="brightness-slider"
             id="brightness-slider"
             class="form-range"
+            max="200"
           />
           <label for="hue-rotate" class="form-label">Hue Rotate</label>
           <input
@@ -151,19 +152,21 @@
             name="hue-rotate-slider"
             id="hue-rotate-slider"
             class="form-range"
+            max="360"
           />
           <label for="saturate" class="form-label">Saturate</label>
           <input
             type="range"
-            value="0"
+            value="100"
             name="saturate-slider"
             id="saturate-slider"
             class="form-range"
+            max="200"
           />
           <label for="opacity" class="form-label">Opacity</label>
           <input
             type="range"
-            value="0"
+            value="100"
             name="opacity-slider"
             id="opacity-slider"
             class="form-range"
@@ -171,10 +174,11 @@
           <label for="sepia" class="form-label">Contrast</label>
           <input
             type="range"
-            value="0"
+            value="100"
             name="constrast-slider"
             id="contrast-slider"
             class="form-range"
+            max="200"
           />
           <label for="sepia" class="form-label">Invert</label>
           <input
@@ -211,7 +215,12 @@
           <div id="drop-shadow-section">
             <hr />
             <label for="shadow-color" class="form-label">Shadow Color</label>
-            <input type="color" name="" class="form-control-color mx-3" id="" />
+            <input
+              type="color"
+              name=""
+              class="form-control-color mx-3"
+              id="color-picker"
+            />
             <br /><br />
             <label for="horizontal-shadow-length" class="form-label"
               >Horizontal Shadow Length</label
@@ -221,6 +230,7 @@
               name="horizontal-shadow-length"
               id="horizontal-shadow-length-slider"
               class="form-range"
+              value="0"
             />
             <label for="vertical-shadow-length" class="form-label"
               >Vertical Shadow Length</label
@@ -230,6 +240,7 @@
               name="vertical-shadow-length"
               id="vertical-shadow-length-slider"
               class="form-range"
+              value="0"
             />
             <label for="blur-radius" class="form-label">Blur Radius</label>
             <input
@@ -237,6 +248,7 @@
               name="blur-radius"
               id="blur-radius-slider"
               class="form-range"
+              value="0"
             />
           </div>
         </div>
